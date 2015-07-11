@@ -25,9 +25,21 @@ angular.module('Notes', ['ionic'])
         $scope.taskModal = modal;
       },{
         scope:$scope,
-        animation: 'slide-on-right'
+        animation:'slide-in-right'
       });
-      $scope.openTask = function(){
+
+      $scope.addNewTask = function(){
         $scope.taskModal.show();
+      }
+
+      $scope.closeTask = function(){
+        $scope.taskModal.hide();
+      }
+
+      $scope.openTask = function( id ){
+
+      }
+      $scope.deleteTask = function( id ){
+        $scope.tasks.slice( id );
       }
     })
